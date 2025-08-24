@@ -11,7 +11,10 @@ pipeline {
     
     stages{
         stage('Bulding'){
-            echo "Building the apllication"
+            steps{
+                echo "Building the apllication"
+            }
+            
         }
         stage('Testing'){
             steps{
