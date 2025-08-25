@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Testing'){
             steps{
-                bat 'npm install --force '
+                bat 'npm install --legacy-peer-deps'
                 bat 'npm ci'
                 bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
             }
