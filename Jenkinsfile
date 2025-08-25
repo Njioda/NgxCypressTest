@@ -10,20 +10,20 @@ pipeline {
     stages{
         stage('Bulding'){
             steps{
-                echo "Building the apllication"
+                echo 'Building the apllication'
             }
             
         }
         stage('Testing'){
             steps{
-                bat "npn ci"
-                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+                bat 'npn ci'
+                bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}''
             }
         }
 
         stage('Deploying'){
             steps{
-                echo "Deploy the apllication"
+                echo 'Deploy the apllication'
             }
             
         }
