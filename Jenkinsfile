@@ -5,9 +5,7 @@ pipeline {
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "Choise the browser you want to execute")
     
     }
-    options{
-        ansiColor('xterm')
-    }
+    
     
     stages{
         stage('Bulding'){
