@@ -32,7 +32,7 @@ pipeline {
         stage('Archive Test Artifacts') {
             steps {
                 //archiveArtifacts artifacts: 'cypress/videos/**, cypress/screenshots/**', allowEmptyArchive: true
-                archiveArtifacts artifacts: 'cypress/reports/**'
+                archiveArtifacts artifacts: 'cypress/report/**'
             }
         }
     }
