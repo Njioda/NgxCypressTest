@@ -29,6 +29,12 @@ pipeline {
             }
             
         }
+        stage('Archive Test Artifacts') {
+            steps {
+                //archiveArtifacts artifacts: 'cypress/videos/**, cypress/screenshots/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'cypress/reports/**'
+            }
+        }
     }
     post {
         always {
