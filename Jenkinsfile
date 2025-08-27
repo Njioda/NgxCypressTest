@@ -18,8 +18,8 @@ pipeline {
             steps{
                 //bat 'npm install --legacy-peer-deps'
                 bat 'npm ci --force'
-                bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
-                //bat 'npx cypress run'
+                //bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
+                bat 'npx cypress run'
             }
         }
 
@@ -28,6 +28,11 @@ pipeline {
                 echo 'Deploy the apllication'
             }
             
+        }
+    }
+    post {
+        always {
+             archiveArtifacts artifacts: 'cypress/videos/**'
         }
     }
 
