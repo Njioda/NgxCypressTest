@@ -38,7 +38,7 @@ pipeline {
     }
     post {
         always {
-             archiveArtifacts artifacts: 'cypress/report/**'
+             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: true, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 
