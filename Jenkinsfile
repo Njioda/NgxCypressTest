@@ -35,6 +35,11 @@ pipeline {
                 archiveArtifacts artifacts: 'cypress/report/**'
             }
         }
+        stage('Allure Report') {
+            steps {
+                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+            }
+        }
     }
     post {
         always {
