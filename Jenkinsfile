@@ -19,7 +19,7 @@ pipeline {
                 //bat 'npm install --legacy-peer-deps'
                 //bat 'npm start'
                 bat 'npm ci --force'
-                bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
+                bat 'npx cypress run --browser chrome --spec ${SPEC}'
                 //bat 'npx cypress run'
             }
         }
