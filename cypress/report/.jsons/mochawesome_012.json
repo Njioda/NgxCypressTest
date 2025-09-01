@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-01T08:32:07.698Z",
+    "end": "2025-09-01T08:32:13.175Z",
+    "duration": 5477,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2cc862b6-5352-41b5-9edf-9c1e58364e84",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.spec.js",
+      "file": "cypress\\e2e\\firstTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "587b3e9e-7bc1-43ef-8400-26d9f3ad2a97",
+          "title": "First test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Date Picker",
+              "fullTitle": "First test suite Date Picker",
+              "timedOut": null,
+              "duration": 5294,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\firstTest.spec.js\"\n}",
+              "code": "cy.visit(\"/\");\ncy.contains(\"Forms\").click();\ncy.contains(\"Datepicker\").click();\ncy.contains(\"nb-card\", \"Common Datepicker\").find(\"input\").then(Input => {\n  cy.wrap(Input).click();\n  cy.get(\".day-cell\").not(\".bounding-month\").contains(\"21\").click();\n  cy.wrap(Input).invoke(\"prop\", \"value\").should(\"contain\", \"Sep 21, 2025\");\n  // different faceons de faire assertion\n  cy.wrap(Input).should(\"have.value\", \"Sep 21, 2025\");\n});\n//console.log(date);",
+              "err": {},
+              "uuid": "dfc589fc-ba23-4d92-bcb9-98b5a7442eae",
+              "parentUUID": "587b3e9e-7bc1-43ef-8400-26d9f3ad2a97",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dfc589fc-ba23-4d92-bcb9-98b5a7442eae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5294,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\report\\.jsons",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
