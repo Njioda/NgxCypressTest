@@ -174,9 +174,9 @@ describe("First test suite", () => {
           .click();
         cy.wrap(Input)
           .invoke("prop", "value")
-          .should("contain", "Aug 21, 2025");
+          .should("contain", "Sep 21, 2025");
         // different faceons de faire assertion
-        cy.wrap(Input).should("have.value", "Aug 21, 2025");
+        cy.wrap(Input).should("have.value", "Sep 21, 2025");
       });
 
     //console.log(date);
