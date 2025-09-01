@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         string(name: 'SPEC', defaultValue: "cypress/e2e/**/**", description: "enter the scripts path that you wanrt to execue ")
-        choice(name: 'BROWSER', choices: ['chrome'], description: "Choise the browser you want to execute")
+        choice(name: 'BROWSER', choices: ['chrome', 'edge','firefox'], description: "Choise the browser you want to execute")
     
     }
     
@@ -19,7 +19,7 @@ pipeline {
                 //bat 'npm install --legacy-peer-deps'
                 //bat 'npm start'
                 bat 'npm ci --force'
-                bat 'npx cypress run --browser chrome'
+                bat 'npx cypress run --browser ${BROWSER}'
                 //bat 'npx cypress run'
             }
         }
